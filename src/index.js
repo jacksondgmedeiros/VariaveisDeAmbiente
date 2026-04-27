@@ -1,12 +1,12 @@
 import dataToConnect from "./data/dataToConnect.js";
 
 async function main() {
-    //use variables from .env file
-    console.log('User: ' + process.env.USERDATABASE);
-    console.log('Password: ' + process.env.PASSWORDDATABASE);
+        //usando as variaveis de ambiente, vem do arquivo .env
+        const user = process.env.USERDATABASE;
+        const password = process.env.PASSWORDDATABASE;
+        await dataToConnect(user, password);        
 
 
-    // await dataToConnect('admin', 'admin');
 }
 
 main();
